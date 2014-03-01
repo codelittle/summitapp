@@ -17,9 +17,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: summithike_development
+  database: summitapp_dev
   pool: 5
-  username: devjah
+  username: preist
   password: psql
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,15 +46,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: summithike_test
+  database: summitapp_test
   pool: 5
-  username: devjah
+  username: preist
   password: psql
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: summithike_production
+  database: summitapp_production
   pool: 5
-  username: devjah
+  username: preist
   password: psql

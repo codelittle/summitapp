@@ -1,18 +1,42 @@
-<h2>Sign up</h2>
+<div id="devise-auth-form" class="small-12 medium-12 large-12 medium-centered large-centered columns">
+  <div class="panel">
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form', :multipart => true }) do |f| %>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <h3>Create Users For Prototype</h3>
+            <%= devise_error_messages! %>
+          </div>
+        </div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= f.label :email %>
+            <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
+          </div>
+        </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+        </div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+        </div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= f.submit 'Sign up', :class => 'button' %>
+          </div>
+        </div>
 
-<%= render "devise/shared/links" %>
+    <% end %>
+
+  </div><!-- end .panel -->
+</div><!-- end #devise-auth-form -->

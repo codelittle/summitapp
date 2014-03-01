@@ -1,17 +1,44 @@
-<h2>Sign in</h2>
+<div id="devise-auth-form" class="small-12 medium-6 large-5 medium-centered large-centered columns">
+  <div class="panel">
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:role => 'form'}) do |f| %>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <h3>Log in</h3>
+            <%= devise_error_messages! %>
+          </div>
+        </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= f.label :email %>
+            <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
+          </div>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%- if devise_mapping.recoverable? %>
+                <%= link_to "Forgot password?", new_password_path(resource_name), class: 'right' %>
+            <% end -%>
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+        </div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= f.submit 'Log in', :class => 'button right' %>
+            <% if devise_mapping.rememberable? -%>
+                <div class="checkbox">
+                  <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+                </div>
+            <% end -%>
+          </div>
+        </div>
 
-<%= render "devise/shared/links" %>
+    <% end %>
+
+  </div>
+  <!-- end .panel -->
+</div><!-- end #devise-auth-form -->

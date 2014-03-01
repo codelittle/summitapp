@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+    <li class="has-dropdown not-click hide-for-small">
+      <a href="/dashboard">
+        <div class="menu-profile">
+          <div class="user-name-position">
+              <span class="user">
+                <%= "Welcome, #{current_user.name}" %>
+              </span>
+          </div>
+        </div>
+      </a>
+      <ul class="dropdown">
+        <li><%= link_to 'Profile', edit_user_registration_path %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </li>
+<% else %>
+    <li><%= link_to 'Login', new_user_session_path, class: 'login-menu' %></li>
+<% end %>

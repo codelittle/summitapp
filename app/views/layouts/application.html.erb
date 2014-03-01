@@ -1,22 +1,41 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <title>Summithike</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Summit App" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Summit App" %>">
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%# Modernizr is required for Zurb Foundation %>
+  <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body>
+<header id="header-bar">
 
+  <%= render 'layouts/top_navigation' %>
 
-<% flash.each do |name, message| %>
-	<div class="alert alert-info alert-dismissable alert-<%= name %>">
-	  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	  <%= content_tag :div, message, :id => "flash_#{name}", :class => "notice" %>
-	</div>
-<% end %>
+</header>
 
-<%= yield %>
+<div id="notifications">
+  <%= render 'layouts/messages' %>
+</div>
+
+<main role="main">
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+
+      <%= yield %>
+
+    </div>
+  </div>
+</main>
+
+<%= render 'layouts/footer' %>
+
 
 </body>
 </html>
