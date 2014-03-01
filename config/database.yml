@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: summithike_development
   pool: 5
-  username: preist
-  password: summit
+  username: devjah
+  password: psql
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +48,13 @@ test:
   encoding: unicode
   database: summithike_test
   pool: 5
-  username: preist
-  password: summit
+  username: devjah
+  password: psql
 
 production:
   adapter: postgresql
   encoding: unicode
   database: summithike_production
   pool: 5
-  username: preist
-  password: summit
+  username: devjah
+  password: psql

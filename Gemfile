@@ -33,6 +33,19 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'devise', '~> 3.2.2'
+gem 'omniauth', '~> 1.2.1'
+gem 'omniauth-facebook', '~> 1.6.0'
+gem 'foundation-rails', '~> 5.1.1.0'
+gem 'foundation-icons-sass-rails', '~> 3.0.0'
+
+group :development do
+  gem "better_errors"
+  gem 'binding_of_caller'
+end
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
