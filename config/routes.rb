@@ -1,4 +1,9 @@
 Summithike::Application.routes.draw do
+  get "goals/index"
+  get "goals/show"
+  get "goals/edit"
+  get "goals/update"
+  get "goals/destroy"
   get "pages/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
