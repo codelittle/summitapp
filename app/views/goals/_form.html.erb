@@ -17,13 +17,23 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :frequency %><br>
+     Monday <%= f.check_box(:frequency, { :multiple => true, checked: '#{ "mon".in?(@frequency_array) }'}, "mon", nil) %><br>
+     Tuesday <%= f.check_box(:frequency, { :multiple => true }, "tue", nil) %><br>
+     Wednesday <%= f.check_box(:frequency, { :multiple => true }, "wed", nil) %><br>
+     Thursday <%= f.check_box(:frequency, { :multiple => true }, "thu", nil) %><br>
+     Friday <%= f.check_box(:frequency, { :multiple => true }, "fri", nil) %><br>
+     Saturday <%= f.check_box(:frequency, { :multiple => true }, "sat", nil) %><br>
+     Sunday <%= f.check_box(:frequency, { :multiple => true }, "sun", nil) %><br>
+  </div>
+
+  <div class="form-group">
     <%= f.label :kind %><br>
     <%= f.select :kind, options_for_select([
     ['yes/no', 'yesno'],
     ['number', 'number']
     ], @goal.kind), {}, :class => "form-control" %>
   </div>
-
 
   <div class="form-group">
     <%= f.label :minimum %><br>
