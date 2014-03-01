@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-  before_action :set_goal, only: [:show, :edit, :update, :destroy, :vote]
+  before_action :set_goal, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
 
   def index
@@ -28,6 +28,8 @@ class GoalsController < ApplicationController
   def create
     @goal = Goal.new(goal_params)
 
+    @goal.frequency = params[:goal][:frequency].join(',')
+
     respond_to do |format|
       if @goal.save
         format.html { redirect_to @goal, notice: "Success." }
@@ -51,13 +53,10 @@ class GoalsController < ApplicationController
   end
 
   def destroy
-    if is_admin?
-      @goal.destroy
+    @goal.destroy
 
-      respond_to do |format|
-        format.html { redirect_to admin_path, :flash => { :danger => "deleted!" } }
-        format.json { head :no_content }
-      end
+    respond_to do |format|
+      format.html { redirect_to admin_path, :flash => { :danger => "deleted!" } }
     end
   end
 
