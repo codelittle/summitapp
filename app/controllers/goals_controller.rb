@@ -22,6 +22,7 @@ class GoalsController < ApplicationController
   end
 
   def edit
+    @frequency_array = @goal.frequency
   end
 
   def create
@@ -29,7 +30,7 @@ class GoalsController < ApplicationController
 
     respond_to do |format|
       if @goal.save
-        format.html { redirect_to goals_path, notice: "Success." }
+        format.html { redirect_to @goal, notice: "Success." }
       else
         format.html { render action: "new" }
       end
@@ -37,6 +38,8 @@ class GoalsController < ApplicationController
   end
 
   def update
+
+    @goal.frequency = params[:goal][:frequency].join(',')
 
     respond_to do |format|
       if @goal.update(goal_params)
@@ -66,7 +69,7 @@ class GoalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def goal_params
-      params.require(:goal).permit(:id, :kind, :frequency, :minimum)
+      params.require(:goal).permit(:id, :title, :kind, :frequency, :minimum)
     end
 
 end
