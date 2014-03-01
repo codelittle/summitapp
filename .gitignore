@@ -10,6 +10,8 @@
 .redcar/
 # public/system/users/avatars/*
 
+config/database.yml
+
 cron.log
 
 # Ignore the default SQLite database.
