@@ -1,12 +1,16 @@
 Summithike::Application.routes.draw do
+  
   get "goals/index"
   get "goals/show"
   get "goals/edit"
-  get "goals/update"
-  get "goals/destroy"
   get "pages/index"
+
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # See how all your routes lay out with "rake routes". 
+  
+  devise_for :users
+
+  resources :goals
 
   # You can have the root of your site routed with "root"
   root 'pages#index'
