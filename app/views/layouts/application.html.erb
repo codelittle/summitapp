@@ -20,19 +20,36 @@
 
 </header>
 
-<div id="notifications">
-  <%= render 'layouts/messages' %>
+<div class="outer-layout row">
+
+  <aside role="navigation" class="small-4 medium-3 large-2 columns">
+
+    <div class="row">
+      <div class="small-12 medium-12 columns">
+
+        <%= render 'layouts/application_menu' %>
+
+      </div>
+    </div>
+
+  </aside>
+
+  <main role="main" class="small-12 medium-9 large-10 columns">
+    <div id="notifications">
+      <%= render 'layouts/messages' %>
+    </div>
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+
+        <%= yield %>
+
+      </div>
+    </div>
+  </main>
+
 </div>
 
-<main role="main">
-  <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
 
-      <%= yield %>
-
-    </div>
-  </div>
-</main>
 
 <%= render 'layouts/footer' %>
 
