@@ -1,5 +1,6 @@
 Summithike::Application.routes.draw do
   
+  get "settings/edit"
   get "goals/index"
   get "goals/show"
   get "goals/edit"
@@ -10,10 +11,15 @@ Summithike::Application.routes.draw do
   
   devise_for :users
 
-  resources :goals
+  resources :goals, :users
 
   # You can have the root of your site routed with "root"
-  root 'pages#index'
+  root 'goals#index'
+
+
+  get 'users/:id/coach' => 'relationships#create', as: :coach
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
