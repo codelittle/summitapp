@@ -14,45 +14,50 @@
 
 </head>
 <body>
-<header id="header-bar">
+<header id="top-bar-container">
 
   <%= render 'layouts/top_navigation' %>
 
 </header>
 
-<div class="outer-layout row">
+<div id="page-layout" class="row collapse">
 
-  <aside role="navigation" class="small-4 medium-3 large-2 columns">
+  <aside role="navigation" class="hide-for-small medium-3 large-3 columns">
 
-    <div class="row">
-      <div class="small-12 medium-12 columns">
-
-        <%= render 'layouts/application_menu' %>
-
-      </div>
-    </div>
+    <%= render 'layouts/application_menu' %>
 
   </aside>
 
-  <main role="main" class="small-12 medium-9 large-10 columns">
-    <div id="notifications">
-      <%= render 'layouts/messages' %>
-    </div>
-    <div class="row">
-      <div class="small-12 medium-12 large-12 columns">
+  <main role="main" class="small-12 medium-9 large-9 columns">
 
-        <%= yield %>
-
+      <div id="notifications">
+        <%= render 'layouts/messages' %>
       </div>
-    </div>
+
+      <header id="page-header">
+        <h1>Overview Helper Method</h1>
+        <h4 class="subhead">Description Helper Method</h4>
+      </header>
+
+      <section id="page-content">
+
+        <div class="row">
+
+          <div class="small-12 medium-12 large-12 columns">
+
+            <%= yield %>
+
+          </div>
+
+        </div>
+
+      </section>
+
   </main>
 
 </div>
 
-
-
 <%= render 'layouts/footer' %>
-
 
 </body>
 </html>
