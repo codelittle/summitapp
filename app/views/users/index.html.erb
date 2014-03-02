@@ -1,0 +1,11 @@
+<% @users.each do |u| %>
+	<h3><%= u.name %> <%= link_to "coach this fellow", coach_path(u) %></h3>
+	Coaching : <% u.coaches.each do |c| %>
+		<%= c.name %>
+	<%end%>
+	<br>
+	Coached by: <% u.coached.each do |c| %>
+		<%= c.name %>
+	<%end%>
+	<hr>
+<%end%>
