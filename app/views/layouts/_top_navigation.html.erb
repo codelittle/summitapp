@@ -1,11 +1,26 @@
 <%# navigation styled for Zurb Foundation 5 %>
-<nav class="top-bar top-login" data-topbar>
+<nav class="top-bar hide-for-small" data-topbar>
+
   <ul class="title-area">
-    <li class="name"><h1><%= link_to 'Summit App', "#" %></h1></li>
+    <li class="name left-small">
+      <h1 class="title"><%= link_to 'Summit App', "#" %></h1>
+    </li>
   </ul>
+
   <div class="top-bar-section right">
     <ul class="right">
       <%= render 'layouts/top_navigation_links' %>
     </ul>
   </div>
+</nav>
+
+<nav class="tab-bar show-for-small">
+  <section class="left-small">
+    <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+  </section>
+
+  <section class="middle tab-bar-section">
+    <h1 class="title">Summit App</h1>
+  </section>
+
 </nav>

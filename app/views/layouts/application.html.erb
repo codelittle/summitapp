@@ -14,46 +14,58 @@
 
 </head>
 <body>
-<header id="top-bar-container">
 
-  <%= render 'layouts/top_navigation' %>
+<div class="off-canvas-wrap">
 
-</header>
+  <div class="inner-wrap">
 
-<div id="page-layout" class="row collapse">
+    <header id="top-bar-container">
+      <%= render 'layouts/top_navigation' %>
+    </header>
 
-  <aside role="navigation" class="hide-for-small medium-3 large-3 columns">
+    <aside class="left-off-canvas-menu">
+      <%= render 'layouts/application_menu' %>
+    </aside>
 
-    <%= render 'layouts/application_menu' %>
 
-  </aside>
+    <div id="page-layout" class="row collapse">
 
-  <main role="main" class="small-12 medium-9 large-9 columns">
+      <aside role="navigation" class="hide-for-small medium-3 large-3 columns">
 
-      <div id="notifications">
-        <%= render 'layouts/messages' %>
-      </div>
+        <%= render 'layouts/application_menu' %>
 
-      <header id="page-header">
-        <h1>Overview Helper Method</h1>
-        <h4 class="subhead">Description Helper Method</h4>
-      </header>
+      </aside>
 
-      <section id="page-content">
+      <main role="main" class="small-12 medium-9 large-9 columns">
 
-        <div class="row">
+        <div id="notifications">
+          <%= render 'layouts/messages' %>
+        </div>
 
-          <div class="small-12 medium-12 large-12 columns">
+        <header id="page-header">
+          <h1>Overview Helper Method</h1>
+          <h4 class="subhead">Description Helper Method</h4>
+        </header>
 
-            <%= yield %>
+        <section id="page-content">
+
+          <div class="row">
+
+            <div class="small-12 medium-12 large-12 columns">
+
+              <%= yield %>
+
+            </div>
 
           </div>
 
-        </div>
+        </section>
 
-      </section>
+      </main>
 
-  </main>
+    </div>
+
+  </div>
 
 </div>
 

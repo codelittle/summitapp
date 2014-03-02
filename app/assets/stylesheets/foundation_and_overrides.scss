@@ -631,8 +631,8 @@ $h6-font-size: 1rem;
 
 // Off-canvas
 
-// $tabbar-bg: #333;
-// $tabbar-height: rem-calc(45);
+$tabbar-bg: #cc6633;
+$tabbar-height: rem-calc(45);
 // $tabbar-line-height: $tabbar-height;
 // $tabbar-color: #FFF;
 // $tabbar-middle-padding: 0 rem-calc(10);
@@ -1346,6 +1346,10 @@ $page-footer-font-size: 12px;
 }
 
 @media #{$small-only} {
+
+  nav.top-bar {
+    @include tab-bar-base();
+  }
 
   #page-footer {
 
