@@ -12,27 +12,65 @@
 
 </head>
 <body>
-<header id="header-bar">
 
-  <%= render 'layouts/top_navigation' %>
+<div class="off-canvas-wrap">
 
-</header>
+  <div class="inner-wrap">
 
-<div id="notifications">
-  <%= render 'layouts/messages' %>
-</div>
+    <header id="top-bar-container">
+      <%= render 'layouts/top_navigation' %>
+    </header>
 
-<main role="main">
-  <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
+    <aside class="left-off-canvas-menu">
+      <%= render 'layouts/application_menu' %>
+    </aside>
 
-      <%= yield %>
+
+    <div id="page-layout" class="row collapse">
+
+      <aside role="navigation" class="hide-for-small medium-3 large-3 columns">
+
+        <%= render 'layouts/application_menu' %>
+
+      </aside>
+
+      <main role="main" class="small-12 medium-9 large-9 columns">
+
+        <div id="notifications">
+          <%= render 'layouts/messages' %>
+        </div>
+
+        <header id="page-header">
+          <h1>Overview Helper Method</h1>
+          <h4 class="subhead">Description Helper Method</h4>
+        </header>
+
+        <section id="page-content">
+
+          <div class="row">
+
+            <div class="small-12 medium-12 large-12 columns">
+
+              <%= yield %>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
 
     </div>
-  </div>
-</main>
 
+  </div>
+
+</div>
+
+<<<<<<< HEAD
+=======
 <%= render 'layouts/footer' %>
 
+>>>>>>> 2958b9481bbf8501fdc82a678b2705001eb1a39f
 </body>
 </html>

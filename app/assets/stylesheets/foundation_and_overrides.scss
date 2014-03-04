@@ -31,16 +31,16 @@
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-$row-width: rem-calc(1400);
-// $column-gutter: rem-calc(30);
-// $total-columns: 12;
+$row-width: rem-calc(2000);
+$column-gutter: rem-calc(40);
+$total-columns: 12;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
-// $body-font-style: normal;
+$body-bg: #fff;
+$body-font-color: #333;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-weight: normal;
+$body-font-style: normal;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -51,12 +51,12 @@ $row-width: rem-calc(1400);
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #3382cc;
+$secondary-color: #e1e1b7;
+$alert-color: #ed594e;
+$success-color: #669933;
+$warning-color: #f08a24;
+$info-color: #f1e49d;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -123,12 +123,12 @@ $row-width: rem-calc(1400);
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(32);
+$h2-font-size: rem-calc(28);
+$h3-font-size: rem-calc(24);
+$h4-font-size: rem-calc(18);
+$h5-font-size: rem-calc(16);
+$h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -631,8 +631,8 @@ $row-width: rem-calc(1400);
 
 // Off-canvas
 
-// $tabbar-bg: #333;
-// $tabbar-height: rem-calc(45);
+$tabbar-bg: #cc6633;
+$tabbar-height: rem-calc(45);
 // $tabbar-line-height: $tabbar-height;
 // $tabbar-color: #FFF;
 // $tabbar-middle-padding: 0 rem-calc(10);
@@ -892,21 +892,21 @@ $row-width: rem-calc(1400);
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to control padding.
-// $side-nav-padding: rem-calc(14 0);
+$side-nav-padding: rem-calc(20 0);
 
 // We use these to control list styles.
-// $side-nav-list-type: none;
-// $side-nav-list-position: inside;
-// $side-nav-list-margin: rem-calc(0 0 7 0);
+$side-nav-list-type: none;
+$side-nav-list-position: inside;
+$side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
-// $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
-// $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
-// $side-nav-font-size: rem-calc(14);
-// $side-nav-font-weight: normal;
-// $side-nav-font-family: $body-font-family;
-// $side-nav-active-font-family: $side-nav-font-family;
+$side-nav-link-color: $primary-color;
+$side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-font-size: rem-calc(14);
+$side-nav-font-weight: bold;
+$side-nav-font-family: $body-font-family;
+$side-nav-active-font-family: $side-nav-font-family;
 
 
 
@@ -1123,38 +1123,38 @@ $row-width: rem-calc(1400);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: #cc6633;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+$topbar-height: 60px;
+$topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
-// $topbar-title-weight: normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-weight: bold;
+$topbar-title-font-size: rem-calc(20);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
-// $topbar-dropdown-link-bg: #333;
-// $topbar-dropdown-link-weight: normal;
-// $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
-// $topbar-dropdown-toggle-alpha: 0.4;
+$topbar-dropdown-bg: #ad4917;
+$topbar-dropdown-link-color: #fff;
+$topbar-dropdown-link-bg: #ad4917;
+$topbar-dropdown-link-weight: normal;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
-// $topbar-link-color-active-hover: #fff;
-// $topbar-link-weight: normal;
-// $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg-hover: #272727  ;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
+$topbar-link-color: #fff;
+$topbar-link-color-hover: #fff;
+$topbar-link-color-active: #fff;
+$topbar-link-color-active-hover: #fff;
+$topbar-link-weight: normal;
+$topbar-link-font-size: rem-calc(13);
+$topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-bg-hover: #ad4917  ;
+$topbar-link-bg-active: $primary-color;
+$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-font-family: $body-font-family;
 
 // $topbar-button-font-size: 0.75rem;
 
@@ -1194,3 +1194,181 @@ $row-width: rem-calc(1400);
 // $include-html-visibility-classes: $include-html-classes;
 
 @import 'foundation';
+
+#top-bar-container {
+  border-bottom: 4px solid #ad4917;
+}
+
+$page-side-nav-link-bg: #222222;
+
+#page-layout {
+  background: $page-side-nav-link-bg;
+
+  main {
+    background: #fff;
+    min-height: 640px;
+  }
+}
+
+/* Header */
+
+#page-header {
+  padding: 25px 20px;
+  border-bottom: 1px solid #ddd;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: 16px;
+    font-weight: normal;
+    color: lighten($body-font-color, 50%);
+  }
+}
+
+/* Side nav */
+
+$page-side-nav-link-padding: 20px 20px;
+$page-side-nav-link-color: #ccc;
+$page-side-nav-link-active-color: #fff;
+$page-side-nav-link-hover-color: #fff;
+$page-side-nav-link-bg: #222222;
+$page-side-nav-link-active-bg: darken($page-side-nav-link-bg, 8%);
+$page-side-nav-link-hover-bg: darken($page-side-nav-link-bg, 5%);
+$page-side-nav-heading-bg: #000;
+$page-side-nav-heading-color: #888;
+$page-side-nav-separator-contrast-ratio: 10%;
+
+ul#page-side-nav {
+  @include side-nav();
+
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  li > a,
+  li > a:first-child:not(.button),
+  li > a:link:first-child:not(.button),
+  li > a:visited:first-child:not(.button),
+  li > a:link,
+  li > a:visited {
+    padding: $page-side-nav-link-padding;
+    color: $page-side-nav-link-color;
+    background: $page-side-nav-link-bg;
+    border-top: 1px solid lighten($page-side-nav-link-bg, $page-side-nav-separator-contrast-ratio);
+    border-bottom: 1px solid darken($page-side-nav-link-bg, $page-side-nav-separator-contrast-ratio);
+  }
+
+  li.active > a,
+  li.active > a:first-child:not(.button),
+  li.active > a:hover:first-child:not(.button),
+  li.active > a:active:first-child:not(.button),
+  li.active > a:hover,
+  li.active > a:active {
+    color: $page-side-nav-link-active-color;
+    background: $page-side-nav-link-active-bg;
+    border-top-color: darken($page-side-nav-link-active-bg, $page-side-nav-separator-contrast-ratio);
+    border-bottom-color: $page-side-nav-link-active-bg;
+  }
+
+  li > a:hover,
+  li > a:hover:first-child:not(.button) {
+    color: $page-side-nav-link-hover-color;
+    background: $page-side-nav-link-hover-bg;
+    border-top-color: $page-side-nav-link-hover-bg;
+    border-bottom-color: $page-side-nav-link-hover-bg;
+  }
+
+  li.heading {
+    padding: $page-side-nav-link-padding;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: $page-side-nav-heading-color;
+    background: $page-side-nav-heading-bg;
+  }
+
+}
+
+
+
+/* Footer */
+$page-footer-padding: 10px;
+$page-footer-text-color: #ccc;
+$page-footer-bg: #000;
+$page-footer-link-color: #eee;
+$page-footer-link-hover-color: #fff;
+$page-footer-font-size: 12px;
+
+#page-footer {
+  padding-top: $page-footer-padding;
+  padding-bottom: $page-footer-padding;
+  color: $page-footer-text-color;
+  background: $page-footer-bg;
+  font-size: $page-footer-font-size;
+
+  div.copyright {
+    line-height: 1.6;
+    padding: 0;
+
+    a,
+    a:link,
+    a:visited {
+      font-weight: bold;
+    }
+  }
+
+  ul.inline-list {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    color: $page-footer-link-color;
+    font-size: $page-footer-font-size;
+  }
+
+  a,
+  a:hover,
+  a:active {
+    color: $page-footer-link-hover-color;
+    font-size: $page-footer-font-size;
+  }
+
+}
+
+@media #{$small-only} {
+
+  nav.top-bar {
+    @include tab-bar-base();
+  }
+
+  #page-footer {
+
+    div.copyright {
+      @include grid-column($columns:12);
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.inline-list {
+      @include grid-column($columns:12);
+      margin: 0;
+      padding: 0;
+
+      li:first-child {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+}
