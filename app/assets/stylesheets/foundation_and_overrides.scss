@@ -1,10 +1,8 @@
 //
 // FOUNDATION SETTINGS
 //
-
 // This is the default html and body font-size for the base rem value.
 // $rem-base: 16px;
-
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
 
@@ -809,7 +807,6 @@ $tabbar-height: rem-calc(45);
 // $price-money-size: rem-calc(32);
 // $price-money-font-family: $body-font-family;
 
-
 // We use these to control the description styles
 // $price-bg: #fff;
 // $price-desc-color: #777;
@@ -908,8 +905,6 @@ $side-nav-font-weight: bold;
 $side-nav-font-family: $body-font-family;
 $side-nav-active-font-family: $side-nav-font-family;
 
-
-
 // We use these to control border styles
 // $side-nav-divider-size: 1px;
 // $side-nav-divider-style: solid;
@@ -969,7 +964,6 @@ $side-nav-active-font-family: $side-nav-font-family;
 // $sub-nav-text-decoration: none;
 // $sub-nav-border-radius: 3px;
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
-
 
 // We use these to control the active item styles
 
@@ -1150,8 +1144,9 @@ $topbar-link-color-active: #fff;
 $topbar-link-color-active-hover: #fff;
 $topbar-link-weight: normal;
 $topbar-link-font-size: rem-calc(13);
-$topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: #ad4917  ;
+$topbar-link-hover-lightness: -10%;
+// Darken by 10%
+$topbar-link-bg-hover: #ad4917;
 $topbar-link-bg-active: $primary-color;
 $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 $topbar-link-font-family: $body-font-family;
@@ -1240,7 +1235,7 @@ $page-side-nav-link-active-bg: darken($page-side-nav-link-bg, 8%);
 $page-side-nav-link-hover-bg: darken($page-side-nav-link-bg, 5%);
 $page-side-nav-heading-bg: #000;
 $page-side-nav-heading-color: #888;
-$page-side-nav-separator-contrast-ratio: 10%;
+$page-side-nav-separator-contrast-ratio: 5%;
 
 ul#page-side-nav {
   @include side-nav();
@@ -1292,11 +1287,11 @@ ul#page-side-nav {
     padding-bottom: 2px;
     color: $page-side-nav-heading-color;
     background: $page-side-nav-heading-bg;
+    border-top: 1px solid lighten($page-side-nav-link-bg, $page-side-nav-separator-contrast-ratio);
+    border-bottom: 1px solid darken($page-side-nav-link-bg, $page-side-nav-separator-contrast-ratio);
   }
 
 }
-
-
 
 /* Footer */
 $page-footer-padding: 10px;
@@ -1352,15 +1347,17 @@ $page-footer-font-size: 12px;
   }
 
   #page-footer {
+    padding-top: $page-footer-padding * 2;
+    padding-bottom: $page-footer-padding * 2;
 
     div.copyright {
-      @include grid-column($columns:12);
+      @include grid-column($columns: 12);
       margin: 0;
       padding: 0;
     }
 
     ul.inline-list {
-      @include grid-column($columns:12);
+      @include grid-column($columns: 12);
       margin: 0;
       padding: 0;
 
@@ -1369,6 +1366,7 @@ $page-footer-font-size: 12px;
         padding-left: 0;
       }
     }
+
   }
 
 }
